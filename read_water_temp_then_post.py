@@ -2,11 +2,13 @@ from gpiozero import LED
 import time
 import glob
 import os
+import requests
 
-#Probe Location
+# Probe Location
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28-01145d8e73ba')[0]
 device_file = device_folder + '/w1_slave'
+
 
 def read_temp_raw():
     f = open(device_file, 'r')
@@ -26,4 +28,16 @@ def read_temp():
     temp_f = temp_c * 1.8 + 32
     return temp_f
 
-print(read_temp())
+
+TOKEN = os.environ["TOKEN"]
+headers = {"Authorization": TOKEN}
+url = "https://mighty-lake-45709.herokuapp.com/temperatures/"
+f_temp = (read_temp())
+
+r = requests.post(url, headers=headers, data={
+    "temperature": f_temp,
+    "date": "test date",
+    "time": "test time"
+})
+print(r.status_code)
+print(r.content)
