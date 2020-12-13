@@ -5,7 +5,7 @@ import glob
 import os
 import requests
 
-#Probe Location
+# Probe Location
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28-01145d8e73ba')[0]
 device_file = device_folder + '/w1_slave'
@@ -27,7 +27,8 @@ def read_temp():
     temp_string = lines[1][equals_pos+2:]
     temp_c = float(temp_string)/1000
     temp_f = temp_c * 1.8 + 32
-    return temp_f
+    formatted_temp_f = format(temp_f, '.2f')
+    return formatted_temp_f
 
 
 now = datetime.now()
