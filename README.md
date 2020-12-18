@@ -12,6 +12,11 @@ AquaPi is an automated aquarium controller that can monitor and manage a variety
 - 220 ohm resistor
 - LED
 
+# Schematic 
+
+![image](https://user-images.githubusercontent.com/71715721/102635483-5f16fb80-4121-11eb-888f-959c1590be39.png)
+
+
 # Cron Job
 ```
 0 * * * * /usr/bin/python3 /home/pi/python/temp/read_water_temp_then_post.py
