@@ -6,6 +6,7 @@ AquaPi is an automated aquarium controller that can monitor and manage a variety
 - Deployed backend https://mighty-lake-45709.herokuapp.com/
 - https://github.com/d-e-k-k/aquapi_frontend 
 - https://github.com/d-e-k-k/aquapi_backend
+- https://github.com/d-e-k-k/aquapi_aquarium_controller
 
 ## AquaPi RaspberryPi Controller
 Currently, a waterproof temperature sensor is attached to the RaspberryPi. Every hour via crontab, a python script is run that sends the current date, time, and probe temperature to the server via http post request. This data is then accessed via React and displayed on a web application.
