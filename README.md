@@ -14,7 +14,8 @@ AquaPi is an automated aquarium controller that can monitor and manage a variety
 
 # Schematic 
 
-![image](https://user-images.githubusercontent.com/71715721/102635483-5f16fb80-4121-11eb-888f-959c1590be39.png)
+![image](https://user-images.githubusercontent.com/71715721/103029861-a853ba80-4528-11eb-8a31-4a77a82bfcf1.png)
+
 
 
 # Cron Job
